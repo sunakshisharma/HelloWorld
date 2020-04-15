@@ -1,8 +1,8 @@
-splitstring = "This string has been \nsplit over \nseveral\nlines"
-print(splitstring)
+split_string = "This string has been \nsplit over \nseveral\nlines"
+print(split_string)
 
-tabbedstring = "1\t2\t3\t4\t5\t6\t7\t8\t9\t10\t11"
-print(tabbedstring)
+tabbed_string = "1\t2\t3\t4\t5\t6\t7\t8\t9\t10\t11"
+print(tabbed_string)
 
 print('The pet shop owner said "No,no, \'e\'s uh,...he\'s resting".')
 print("The pet shop owner said \"No,no, 'e's uh,...he's resting\".")
@@ -35,4 +35,4 @@ age = 24
 print(age)
 print(type(age))
 
-print( name + " is " + age + " years old ")
+# print( name + " is " + age + " years old ")

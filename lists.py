@@ -1,0 +1,33 @@
+# ipAddress = input(("Please enter as IP address: "))
+# print(ipAddress.count("."))
+
+parrot_list = ["non pinin", "no more", "a stiff", "bereft of live"]
+parrot_list.append("Nowegian blue")
+for state in parrot_list:
+    print("The parrot is " + state)
+
+print()
+
+even = [2, 4, 6, 8]
+odd = [1, 3, 5, 7, 9]
+numbers = even + odd
+numbers.sort()
+print(numbers)
+# or
+print(sorted(numbers))
+
+numbers= even + odd
+number_in_order = sorted((numbers))
+
+if numbers == number_in_order:
+    print("The lists are equal. ")
+else:
+    print("The lists are not equal. ")
+
+print()
+if number_in_order == sorted(numbers):
+    print("The lists are equal. ")
+else:
+    print("The lists are not equal. ")
+
+

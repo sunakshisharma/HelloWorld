@@ -18,3 +18,4 @@ print("Wed" in today)
 print("nes" in today)
 print("tue" in today)
 print("prob" in string2)
+
