@@ -12,3 +12,10 @@ print(veg)
 
 veg.update(fruit)  # to add fruit dictionary to veg
 print(veg)
+
+print(fruit.update(veg))
+print(fruit)
+
+nice_and_nasty = fruit.copy()
+nice_and_nasty.update(veg)
+print(nice_and_nasty)

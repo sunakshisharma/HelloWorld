@@ -11,15 +11,23 @@ exits = {0: {"Q": 0},
          3: {"W": 1, "Q": 0},
          4: {"N": 1, "W": 2, "Q": 0},
          5: {"W": 2, "S": 1, "Q": 0}}
+
+namedExits = {
+              1: {"2":2,"3":3,"5":5,"4":4},
+              2: {"5":5},
+              3: {"1":1},
+              4: {"1":1,"2":2},
+              5: {"2":2,"1":1}}
 vocabulary = {"QUIT": "Q",
               "NORTH": "N",
               "SOUTH": "S",
               "EAST": "E",
-              "WEST": "W" }
+              "WEST": "W",
+              "ROAD": "1",
+              "HILL": "2",
+              "BUILDING": "3",
+              "VALLEY":"4"}
 
-# print(locations[0].split())
-# print(locations[3].split())
-# print(" ".join(locations[0].split()))
 
 loc = 1
 while True:
@@ -29,21 +37,21 @@ while True:
 
     if loc == 0:
         break
+    allExits = exits[loc].copy()
+    allExits.update(namedExits[loc])
 
     direction = input("Available exits are: " + availableExits + " ").upper()
     print()
-    # parse the input , using vocabulary dictionary if necessary
-    if len(direction) > 1:   # more than 1 letter , so check vocab
-        # for word in  vocabulary:   # does it contain a word we know
-        #     if word in direction:
-        #         direction = vocabulary[word]
+
+    if len(direction) > 1:
+
         words = direction.split()
         for word in words:
             if word in vocabulary:
                 direction = vocabulary[word]
                 break
 
-    if direction in exits[loc]:
-        loc = exits[loc][direction]
+    if direction in allExits:
+        loc = allExits[direction]
     else:
         print("You can not go in that direction")
